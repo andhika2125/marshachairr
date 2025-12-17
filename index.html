@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Digital Marketing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Bubble background lucu -->
+<div class="bubble" style="width:40px; height:40px; left:10%; animation-duration:8s;"></div>
+<div class="bubble" style="width:60px; height:60px; left:30%; animation-duration:12s;"></div>
+<div class="bubble" style="width:30px; height:30px; left:50%; animation-duration:10s;"></div>
+<div class="bubble" style="width:50px; height:50px; left:70%; animation-duration:14s;"></div>
+<div class="bubble" style="width:25px; height:25px; left:85%; animation-duration:9s;"></div>
+
+<header>
+    <h1>Digital Marketing Dashboard</h1>
+    <p id="welcome"></p>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN -->
+    <div class="box" id="loginBox">
+        <div class="cute-icon">🌸</div>
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Masukkan Nama">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- FORM INPUT MENU -->
+    <div class="box hidden" id="menuBox">
+        <div class="cute-icon">💖</div>
+        <h2>Input Produk/Menu</h2>
+
+        <input type="text" id="menu" placeholder="Nama Menu/Produk">
+        <input type="number" id="harga" placeholder="Harga">
+        <input type="text" id="gambar" placeholder="URL Gambar (contoh: https://...)">
+
+        <button onclick="addMenu()">Simpan</button>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- TABEL DATA MENU -->
+    <div class="box">
+        <div class="cute-icon">📋✨</div>
+        <h2>Daftar Menu/Produk</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Menu/Produk</th>
+                    <th>Harga</th>
+                    <th>Gambar</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
