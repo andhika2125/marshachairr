@@ -1,0 +1,109 @@
+/* ================= ANIMASI ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* ================= GLOBAL ================= */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff0f6);
+    margin: 0;
+    animation: fadeIn 1s ease;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(135deg, #ff9acb, #ffb6d9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header h1 { margin: 0; }
+header p { margin-top: 5px; font-weight: bold; }
+
+/* ================= CONTAINER ================= */
+.container { width: 95%; max-width: 1100px; margin: auto; }
+
+/* ================= BOX ================= */
+.box {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 182, 217, 0.4);
+    animation: fadeIn 0.8s ease;
+}
+
+/* INPUT & BUTTON */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffc1dc;
+    font-size: 14px;
+}
+
+input:focus { outline: none; border-color: #ff9acb; box-shadow: 0 0 5px rgba(255, 154, 203, 0.5); }
+
+button {
+    background: #ff9acb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover { background: #ff7fb8; transform: scale(1.03); }
+
+.logout { background: #ff6fae; }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; border-radius: 12px; overflow: hidden; }
+table, th, td { border: 1px solid #ffd1e6; }
+th { background: #ffb6d9; color: white; padding: 10px; }
+td { padding: 8px; text-align: center; background: #fff5fa; }
+
+/* HIDDEN */
+.hidden { display: none; }
+
+/* ICON LUCU */
+.cute-icon {
+    font-size: 30px;
+    animation: float 2s ease-in-out infinite;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* BUBBLE BACKGROUND */
+.bubble {
+    position: fixed;
+    bottom: -100px;
+    background: rgba(255, 182, 217, 0.5);
+    border-radius: 50%;
+    animation: bubbleUp 10s infinite ease-in;
+    z-index: -1;
+}
+
+@keyframes bubbleUp {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(-120vh); opacity: 0; }
+}
+
+/* SPARKLE KLIK */
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(1.8); }
+}
